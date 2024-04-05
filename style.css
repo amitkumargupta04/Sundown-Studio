@@ -1,0 +1,349 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+.page1{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #EFEAE3;
+    padding: 0 2vw;
+
+}
+
+nav{
+    width: 100%;
+    padding: 2vw 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.nav-part2 h4{
+    padding:  10px 20px;
+    border: 1px solid rgb(185, 162, 193);
+    border-radius: 50px;
+    font-weight: 500;
+    color: #000000bb;
+    font-size: 18px;
+    position: relative;
+    transition: all ease 0.4s;
+    overflow: hidden;
+}
+
+.nav-part2 h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    transition: all ease 0.4s;
+    border-radius: 50%;
+    
+
+}
+.nav-part2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+
+}
+.nav-part2 h4 a{
+    text-decoration: none;
+    color: #000000bb;
+    position: relative;
+    z-index: 9;
+}
+.nav-part2 h4:hover a{
+    color: white;
+}
+/* 
+page2 */
+
+#center{
+    height: 500px;
+    width: 100%;
+    background-color: #EFEAE3;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(124, 83, 83);
+}
+.left h3{
+      width: 30vw;
+      font-size: 27px;
+      margin-bottom: 30px;
+      
+}
+
+#center h1{
+    font-size: 100px;
+    text-align: right;
+    line-height: 95px
+    
+}
+
+.page1 video{
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+/* Hero-Shape */
+
+#hero-shape{
+    margin-top: 30px;
+    position: absolute;
+    height: 36vw;
+    width: 46vw;
+    background-color: orangered;
+    right: 0;
+    top: 75vh;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(10px);
+    
+
+}
+.hero1{
+    height: 100%;
+    width: 100%;
+    background-color: orangered;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(30px);
+    position: absolute;
+    animation-name: anime1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+.hero2{
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(orangered, rgb(255, 102, 0));
+    border-radius: 50%;
+    filter: blur(30px);
+    position: absolute;
+    animation-name: anime2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+.hero3{
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(orangered, rgb(255, 102, 0));
+    border-radius: 50%;
+    filter: blur(30px);
+    position: absolute;
+    animation-name: anime1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes anime1 {
+    from{
+        transform: translate(-35%, -4%);
+    }
+    to{
+        transform: translate(0%, 10%);
+    }
+}
+@keyframes anime2 {
+    from{
+        transform: translate(5%, -5%);
+    }
+    to{
+        transform: translate(-20%, 20%);
+    }
+}
+
+#page2{
+    height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding-top: 7vw;
+    padding-bottom: 7vw;
+    position: relative;
+}
+.moving-text{
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.moving-text::-webkit-scrollbar{
+    display: none;
+}
+.container{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.gola{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: orangered;
+    display: inline-block;
+    margin: 1vw 2vw;
+    
+}
+.container h1{
+    font-size: 75px;
+   
+    display: inline-block;
+}
+
+@keyframes move{
+    from{
+        transform: translate(0);
+    } 
+    to{
+        transform: translate(-100%);
+    }
+}
+
+#page2-bottom{
+    height: 75vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+#page2-bottom h1{
+    font-size: 3.75vw;
+    width: 50%;
+    border-radius: 50%;
+    line-height: 65px;
+    position: relative;
+    z-index: 9;
+}
+.bottom2-part{
+    width: 22%;
+}
+.bottom2-part img{
+    width: 100%;
+    border-radius: 10px;
+}
+.bottom2-part p{
+    font-weight: 100;
+    margin-top: 40px;
+}
+
+ #page2 .gooey{
+    height: 32vw;
+    width: 32vw;
+    position: absolute;
+    background: linear-gradient(to top, rgb(255, 81, 0), rgb(255, 0, 0));
+    border-radius: 50%;
+    top: 60%;
+    left: 25%;
+    filter: blur(25px);
+    animation-name: geey;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+
+.geey2{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+}
+
+#page3{
+   
+    height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+}
+
+@keyframes geey{
+    from{
+        transform: translate(10%, -10%);
+    }
+    to {
+        transform: translate(-10%, 10%) skew(-12deg);
+    }
+}
+/* 
+page3 */
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color:#EFEAE3;
+    position: relative;
+    
+}
+
+ .elem{
+    height: 100px;
+    width: 100%;
+    position: relative;
+    padding: 0 2vw;
+   
+    border-bottom: 1px solid #000;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.elem h2{
+    font-size: 3vw;
+    width: 100%;
+    position: relative;
+    z-index: 9;
+    
+}
+.elem .overlay{
+    height: 100px;
+    width: 100%;
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease-in 0.3s;
+    
+}
+.elem:hover .overlay{
+    top: 0;
+}
+
+#fixed-image{
+    height: 30vw;
+    width: 24vw;
+    background-color: red;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 25%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
